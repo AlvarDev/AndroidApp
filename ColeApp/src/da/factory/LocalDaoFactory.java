@@ -22,7 +22,6 @@ public class LocalDaoFactory extends DAOFactory{
         InputStream iStream = null;
         try{
             HttpGet hGet = new HttpGet("http://tu_ip/Server/dao.interfaces/"+url);
-            //ServerLocal de Prueba 192.168.1.33
             HttpClient hClient = new DefaultHttpClient();
             HttpResponse response = (HttpResponse)hClient.execute(hGet);
             HttpEntity entity = response.getEntity();
