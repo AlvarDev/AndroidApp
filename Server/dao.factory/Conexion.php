@@ -1,8 +1,8 @@
 <?php
 class ConexionDB 
 {
-     const SERVER = "127.0.1.1";
-     const USER = "root";
+     const SERVER = "tu_ip";
+     const USER = "tu_usuario";
      const PASS = "";
      const DATABASE = "ColeDB";
      private $cn = null;
