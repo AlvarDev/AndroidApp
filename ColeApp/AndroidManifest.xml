@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.autonoma.coleapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.autonoma.coleapp.Login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.autonoma.coleapp.Opciones"
+            android:label="@string/title_activity_opciones" >
+        </activity>
+        <activity
+            android:name="com.autonoma.coleapp.Matricula"
+            android:label="@string/title_activity_matricula"
+            android:parentActivityName="com.autonoma.coleapp.Opciones" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.autonoma.coleapp.Opciones" />
+        </activity>
+        <activity
+            android:name="com.autonoma.coleapp.VerAlumnos"
+            android:label="@string/title_activity_ver_alumnos"
+            android:parentActivityName="com.autonoma.coleapp.Opciones" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.autonoma.coleapp.Opciones" />
+        </activity>
+        <activity
+            android:name="com.autonoma.coleapp.ModificarAlumno"
+            android:label="@string/title_activity_modificar_alumno"
+            android:parentActivityName="com.autonoma.coleapp.VerAlumnos" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.autonoma.coleapp.VerAlumnos" />
+        </activity>
+        <activity
+            android:name="com.autonoma.coleapp.FerGrados"
+            android:label="@string/title_activity_fer_grados"
+            android:parentActivityName="com.autonoma.coleapp.Opciones" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.autonoma.coleapp.Opciones" />
+        </activity>
+        <activity
+            android:name="com.autonoma.coleapp.VerGrados"
+            android:label="@string/title_activity_ver_grados"
+            android:parentActivityName="com.autonoma.coleapp.Opciones" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.autonoma.coleapp.Opciones" />
+        </activity>
+        <activity
+            android:name="com.autonoma.coleapp.AsignarProfesor"
+            android:label="@string/title_activity_asignar_profesor"
+            android:parentActivityName="com.autonoma.coleapp.VerGrados" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.autonoma.coleapp.VerGrados" />
+        </activity>
+    </application>
+
+</manifest>
